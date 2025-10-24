@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Texto en la pestaña -->
+    <title>Eventos</title>
+    <!-- Vinculacion con el archivo css -->
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/mycss.css' %}">
+    <!-- Vinculacion con el archivo js -->
+    <script src="{% static 'core/js/bootstrap.js' %}"></script>
+    <script src="{% static 'core/js/myjs.js' %}"></script>
+    
+</head>
+
+<!--  -->
+
+<body>
+    <!-- Barra de navegacion -->
+    {% include 'core/nav_bar.html' %}
+
+    <!-- Listado de eventos -->
+   <div class="row row-cols-1 row-cols-md-1 g-1">
+        <div class="col">
+            <!-- Tarjetas sacadas de bootstrap.com -->
+            <!-- Tarjetas para los eventos -->
+            <div class="card">
+                <!-- Imagen del elemento -->
+                <img class="card-img-top" src="../img/Charla.jpg" alt="Imagen del evento">
+                <!-- Cuerpo de la tarjeta -->
+                <div class="card-body">
+                    <!-- Titulo de la tarjeta -->
+                    <h5 class="card-title">Charla sobre las charlas</h5>
+                    <!-- Temporizador -->
+                    <script>
+                        timer(new Date("2025-09-12T20:00:00"))
+                    </script>
+                    <!-- Descripcion del evento -->
+                    <p>12 de Septiembre 2025 - 8PM</p>
+                    <p class="card-text">Una interesante charla sobre el proposito y como mantener una charla.
+                    </p>
+                    <p>Lugar: Teatro Municipal de Valparaiso.</p>
+                    <!-- Precio -->
+                    <p>5000 Pesos la entrada</p>
+                </div>
+            </div>
+            <!-- ---------------------------------------- -->
+            <div class="card">
+                <!-- Imagen del elemento -->
+                <img class="card-img-top" src="../img/concierto musica clasica.jpg" alt="Imagen del evento">
+                <!-- Cuerpo de la tarjeta -->
+                <div class="card-body">
+                    <!-- Titulo de la tarjeta -->
+                    <h5 class="card-title">Orquesta clásica</h5>
+                    <!-- Temporizador -->
+                    <script>
+                        timer(new Date("2025-12-21T17:00:00"))
+                    </script>
+                    <!-- Descripcion del evento -->
+                     <p>21 de Diciembre 2025 - 5PM</p>
+                    <p class="card-text">Disfruta de estas piezas de la música clásica con esta orquesta.
+                    </p>
+                    <p>Lugar: Teatro Aula Magna de la USM.</p>
+                    <!-- Precio -->
+                    <p>3000 Pesos la entrada</p>
+                </div>
+            </div>
+            <!-- ---------------------------------------- -->
+            <div class="card">
+                <!-- Imagen del elemento -->
+                <img class="card-img-top" src="../img/Los miserables.webp" alt="Imagen del evento">
+                <!-- Cuerpo de la tarjeta -->
+                <div class="card-body">
+                    <!-- Titulo de la tarjeta -->
+                    <h5 class="card-title">Los Miserables</h5>
+                    <!-- Temporizador -->
+                    <script>
+                        timer(new Date("2025-10-01T10:00:00"))
+                    </script>
+                    <!-- Descripcion del evento -->
+                     <p>1 de Octubre 2025 - 10AM</p>
+                    <p class="card-text">Presencia esta obra de teatro.
+                    </p>
+                    <p>Lugar: Teatro Nescaffe.</p>
+                    <!-- Precio -->
+                    <p>Entrada liberada.</p>
+                </div>
+            </div>
+            <!-- ---------------------------------------- -->
+            <div class="card">
+                <!-- Imagen del elemento -->
+                <img class="card-img-top" src="../img/html icono.png" alt="Imagen del evento">
+                <!-- Cuerpo de la tarjeta -->
+                <div class="card-body">
+                    <!-- Titulo de la tarjeta -->
+                    <h5 class="card-title">Entrega certamen 1</h5>
+                    <!-- Temporizador -->
+                    <script>
+                        timer(new Date("2025-09-08T09:00:00"))
+                    </script>
+                    <!-- Descripcion del evento -->
+                     <p>8 de Septiembre 2025 - 9AM</p>
+                    <p class="card-text">Entrega de certamen 1.
+                    </p>
+                    <p>Lugar: Aula virtual.</p>
+                    <!-- Precio -->
+                    <p>Entrada liberada.</p>
+                </div>
+            </div>
+            <!-- ---------------------------------------- -->
+        </div>
+    </div>
+</body>
+</html>

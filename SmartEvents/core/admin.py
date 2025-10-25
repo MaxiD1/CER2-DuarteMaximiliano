@@ -1,7 +1,4 @@
 from django.contrib import admin
-from .models import Proveedor, Producto, Contacto
+from .models import evento
 
-
-admin.site.register(Producto)
-admin.site.register(Proveedor)
-admin.site.register(Contacto)
+admin.site.register(evento)

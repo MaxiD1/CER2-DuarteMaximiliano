@@ -14,16 +14,16 @@
     <script src="{% static 'core/js/myjs.js' %}"></script>    
 </head>
 
+
 <body>
     <!-- Barra de navegacion -->
     {% include 'core/nav_bar.html' %}
 
     <div class="container">
-        <h2>Register</h2>
-        <form method="POST">
+        <h2>Inicias sesion</h2>
+        <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Sign Up</button>
-        </form>
-    </div>
+        <button type="submit">Iniciar sesion</button>
+    </form>
 </body>

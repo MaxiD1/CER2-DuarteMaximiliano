@@ -27,5 +27,7 @@ urlpatterns = [
     path('registro/', views.register, name="register"),
     path('login/', auth_views.LoginView.as_view(template_name='core/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
+    path('eventos/<int:evento_id>/inscribirse/', views.inscribirse_evento, name='inscribirse_evento'),
+    path('eventos/<int:evento_id>/desinscribirse/', views.desinscribirse_evento, name='desinscribirse_evento'),
     path('admin/', admin.site.urls),
 ]

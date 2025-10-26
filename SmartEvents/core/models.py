@@ -12,8 +12,8 @@ class evento(models.Model):
     capacidad = models.PositiveIntegerField(default=100)
     inscritos = models.ManyToManyField(User, related_name='eventos_inscritos', blank=True)
 
-def total_inscritos(self):
-    return self.inscritos.count()
-
-# def hay_cupo(self):
-#     return self.num_inscritos() < self.max_asistentes
+    def total_inscritos(self):
+        return self.inscritos.count()
+    
+    def hay_cupo(self):
+        return (self.capacidad - self.total_inscritos())

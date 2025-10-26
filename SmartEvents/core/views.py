@@ -33,7 +33,7 @@ def inscribirse_evento(request, evento_id):
     evento = get_object_or_404(Evento, id=evento_id)
     if not evento.hay_cupo():
         messages.error(request, "Este evento ya está lleno.")
-    elif request.user in Evento.inscritos.all():
+    elif request.user in evento.inscritos.all():
         messages.warning(request, "Ya estás inscrito en este evento.")
     else:
         evento.inscritos.add(request.user)
@@ -48,4 +48,11 @@ def desinscribirse_evento(request, evento_id):
         messages.success(request, "Te has desinscrito del evento.")
     else:
         messages.warning(request, "No estabas inscrito en este evento.")
-    return redirect('events')
+    
+    next_url = request.POST.get('stay', 'events')
+    return redirect(next_url)
+
+@login_required
+def mis_eventos(request):
+    eventos_inscritos = Evento.objects.filter(inscritos=request.user).order_by('fecha')
+    return render(request, 'core/user.html', {'eventos': eventos_inscritos})

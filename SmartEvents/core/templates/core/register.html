@@ -19,11 +19,11 @@
     {% include 'core/nav_bar.html' %}
 
     <div class="container">
-        <h2>Register</h2>
+        <h2>Registrar</h2>
         <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Sign Up</button>
+        <button type="submit">Registrar</button>
         </form>
     </div>
 </body>
